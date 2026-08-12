@@ -1,0 +1,6 @@
+com\example\tasktracker\model\Task$Status.class
+com\example\tasktracker\service\TaskService.class
+com\example\tasktracker\model\Task.class
+com\example\tasktracker\repo\TaskRepository.class
+com\example\tasktracker\controller\TaskController.class
+com\example\tasktracker\TaskTrackerApplication.class
