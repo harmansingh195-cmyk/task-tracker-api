@@ -1,4 +1,4 @@
-# Task Tracker API (Spring Boot + H2 + Maven) + Playwright API tests
+# Task Tracker API
 
 # Project Overview (Capstone: AI-Assistant–Driven SDLC with HITL)
 This repository contains a small Spring Boot REST application (Task Tracker API) used as the base application for the capstone project: AI-Assistant–Driven SDLC with Human-in-the-Loop (HITL) & Tooling.
