@@ -1,6 +1,7 @@
 package com.example.tasktracker.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import java.time.Instant;
 
 @Entity
@@ -11,6 +12,7 @@ public class Task {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @NotBlank(message = "title is required")
   @Column(nullable = false)
   private String title;
 
