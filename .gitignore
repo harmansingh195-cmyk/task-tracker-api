@@ -1,0 +1,15 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+
+# Node dependencies
+node_modules/
+
+# Playwright BDD generated test files (regenerated on each run)
+.features-gen/
+
+# Playwright test artefacts
+playwright-report/
+test-results/
