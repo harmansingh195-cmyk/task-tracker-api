@@ -1,7 +1,9 @@
 package com.example.tasktracker.controller;
 
+import com.example.tasktracker.dto.CreateTaskRequest;
 import com.example.tasktracker.model.Task;
 import com.example.tasktracker.service.TaskService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,10 +31,11 @@ public class TaskController {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Task create(@RequestBody Task task) {
-    if (task.getTitle() == null || task.getTitle().isBlank()) {
-      throw new IllegalArgumentException("title is required");
-    }
+  public Task create(@Valid @RequestBody CreateTaskRequest request) {
+    Task task = new Task();
+    task.setTitle(request.getTitle());
+    task.setDescription(request.getDescription());
+    task.setStatus(request.getStatus());
     return service.create(task);
   }
 
