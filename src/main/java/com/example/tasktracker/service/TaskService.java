@@ -1,5 +1,6 @@
 package com.example.tasktracker.service;
 
+import com.example.tasktracker.exception.TaskNotFoundException;
 import com.example.tasktracker.model.Task;
 import com.example.tasktracker.repo.TaskRepository;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ public class TaskService {
   public List<Task> list() { return repo.findAll(); }
 
   public Task get(long id) {
-    return repo.findById(id).orElseThrow(() -> new IllegalArgumentException("Task not found: " + id));
+    return repo.findById(id).orElseThrow(() -> new TaskNotFoundException(id));
   }
 
   public Task create(Task task) {
