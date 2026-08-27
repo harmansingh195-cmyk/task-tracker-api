@@ -11,6 +11,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+  mvc:
+    problemdetails:
+      enabled: true
 
   h2:
     console:
