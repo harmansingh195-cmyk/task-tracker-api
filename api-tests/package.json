@@ -4,9 +4,13 @@
   "version": "1.0.0",
   "scripts": {
     "test": "playwright test",
-    "test:report": "playwright test --reporter=html"
+    "test:report": "playwright test --reporter=html",
+    "bdd:gen": "bddgen --config bdd.config.ts",
+    "test:bdd": "npm run bdd:gen && playwright test",
+    "test:bdd:report": "npm run bdd:gen && playwright test --reporter=html"
   },
   "devDependencies": {
-    "@playwright/test": "^1.46.0"
+    "@playwright/test": "^1.46.0",
+    "playwright-bdd": "^9.2.0"
   }
 }
