@@ -3,11 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "test": "playwright test",
-    "test:report": "playwright test --reporter=html",
-    "bdd:gen": "bddgen --config bdd.config.ts",
-    "test:bdd": "npm run bdd:gen && playwright test",
-    "test:bdd:report": "npm run bdd:gen && playwright test --reporter=html"
+    "test": "playwright test --project=api-spec",
+    "test:report": "playwright test --project=api-spec --reporter=html",
+    "bdd:gen": "bddgen",
+    "test:bdd": "npm run bdd:gen && playwright test --project=bdd",
+    "test:all": "npm run bdd:gen && playwright test",
+    "test:all:report": "npm run bdd:gen && playwright test --reporter=html"
   },
   "devDependencies": {
     "@playwright/test": "^1.46.0",
